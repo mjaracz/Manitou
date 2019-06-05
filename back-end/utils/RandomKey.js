@@ -6,17 +6,18 @@ class RandomKey {
     this.currentIndex = currentIndex;
     this.check = false;
 
-    if(arrID.length === 0 || currentIndex === undefined) {
+    if (arrID.length === 0 || currentIndex === undefined) {
       throw new Error('Błąd połączenia z bazą dabych, spróbuj ponownie później')
     }
   }
+
   startMachine() {
-    if(!this.check) {
+    if (!this.check) {
       this.checkRepeat_ID();
       this.getRandomNumber();
       this.getNewItem();
 
-      if(this.newItem !== undefined) {
+      if (this.newItem !== undefined) {
         return this.newItem
       }
 
@@ -24,18 +25,18 @@ class RandomKey {
       return false
     }
   }
-  
+
   checkRepeat_ID() {
     this.arrID.push(this.newItem);
     this.check = this.arrID.reduce((a, b) => {
-      if(a === b) {
+      if (a === b) {
         b = null;
         return false
       }
       return true
     })
   }
-    
+
   getRandomNumber() {
     const options = {
       min: 0,
@@ -43,7 +44,7 @@ class RandomKey {
       integer: true
     };
     let nr = rn(options);
-    if(nr) {
+    if (nr) {
       this.randomNR = nr;
       return this.randomNR
     }
@@ -51,8 +52,8 @@ class RandomKey {
 
   getNewItem() {
     let nr = this.randomNR;
-    if(nr) return this.newItem = `${nr}index${this.currentIndex}`;
-    if(this.newItem) return this.newItem
+    if (nr) return this.newItem = `${nr}index${this.currentIndex}`;
+    if (this.newItem) return this.newItem
   }
 }
 

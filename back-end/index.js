@@ -1,6 +1,7 @@
 const parser = require('body-parser');
 const routes = require('./stories/stories.routes.js');
 const userRoutes = require('./users/user.routes');
+const cors = require('cors');
 
 const express = require('express');
 
@@ -9,11 +10,11 @@ const http = require('http').Server(app);
 
 const port = process.env.PORT || 8080;
 
-
+app.use(cors());
 app.use(parser.json());
-app.use(parser.urlencoded({ extended: true }));
+app.use(parser.urlencoded({extended: true}));
 app.use('/api', routes);
-app.use('/user', userRoutes);
+app.use('/api/user', userRoutes);
 app.use((req, res) => {
   res.status(404)
 });

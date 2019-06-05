@@ -5,30 +5,28 @@ const JSONdb = require('node-json-db');
 const db = new JSONdb('stories', true, false);
 
 
-async function storiesAll (req, res) {
+async function storiesAll(req, res) {
   try {
     return await db.getData('/');
-  }
-  catch(e) {
+  } catch (e) {
     res.statusMessage = e.message;
     res.status(400).send(e.message);
   }
 }
 
-async function storyByID (req, res) {
+async function storyByID(req, res) {
   try {
     const data = await db.getData('/data');
     doIdExists(req, data);
 
     return await db.getData(`/data[${req.params.id}]`);
-  }
-  catch(e) {
+  } catch (e) {
     res.statusMessage = e.message;
     res.status(400).send(e.message);
   }
 }
 
-async function storyNew (req, res) {
+async function storyNew(req, res) {
   const data = await db.getData('/data');
   const key = generateKey(data, res);
 
@@ -41,10 +39,11 @@ async function storyNew (req, res) {
     }, true);
   };
   const newStory = dbPushGen();
-  if(newStory.next().done)
-   return await db.getData(`/data[${data.length - 1}]`)
+  if (newStory.next().done)
+    return await db.getData(`/data[${data.length - 1}]`)
 }
-async function storyUpdate (req, res) {
+
+async function storyUpdate(req, res) {
   const data = await db.getData('/data');
   const key = generateKey(data, res);
 
@@ -57,25 +56,25 @@ async function storyUpdate (req, res) {
     }, true)
   };
 
-  if(update.next().done) {
+  if (update.next().done) {
     return await db.get(`/data[${req.params.id}]`);
   }
 }
-async function storyDelete (req, res) {
+
+async function storyDelete(req, res) {
   try {
-    const data =  await db.getData('/data');
+    const data = await db.getData('/data');
     doIdExists(req, data);
 
     const resGen = function* () {
       return db.getData(`/data[${req.params.id}]`);
     };
     const response = resGen();
-    if(response.next().done) {
+    if (response.next().done) {
       await db.delete(`/data[${req.params.id}]`);
       return response.next().value;
     }
-  }
-  catch(e) {
+  } catch (e) {
     console.error(e);
     res.status(400).send(e);
   }
