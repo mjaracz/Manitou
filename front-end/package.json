@@ -22,7 +22,7 @@
     "redux-observable": "^1.0.0",
     "rxjs": "^6.3.3",
     "rxjs-compat": "^6.3.3",
-    "serve": "^7.1.3"
+    "serve": "^10.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
