@@ -1,0 +1,146 @@
+.mainPage {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.mainPage--flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  transition: .2s ease-in-out;
+  overflow-x: hidden;
+}
+
+.mainPage__img {
+  flex: 1;
+  display: flex;
+  transition: .5s ease-in-out;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainPage__img--text {
+  display: block;
+  position: relative;
+  top: -100vh;
+  color: #f6f6f6;
+  transition: .8s ease-in-out;
+  font-family: 'Ubuntu', sans-serif;
+}
+.mainPage__img > a {
+  text-decoration: none;
+}
+.mainPage__img--text1 {
+  color: #4b4a4a;
+}
+.mainPage__img:hover .mainPage__img--text {
+  top: 0;
+}
+
+.mainPage__img:hover {
+  flex: 3;
+  filter: grayscale(0);
+}
+
+
+.mainPage__img1 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../../assets/img3.JPG');
+  flex: 1;
+}
+
+.mainPage__img2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../../assets/img6.JPG');
+  flex: 1;
+}
+
+.mainPage__img3 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../../assets/img2.JPG');
+  flex: 1;
+}
+
+
+
+.mainPage--description {
+  cursor: pointer;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainPage__text {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 400;
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--secondary-color);
+  margin-top: 0;
+  margin-bottom: 45px;
+  width: 520px;
+}
+
+.mainPage__SVG {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  fill: var(--primary-color);
+  transition: .2s ease-in-out;
+}
+
+.mainPage__SVG:hover {
+  fill: var(--secondary-color);
+}
+
+
+
+@media screen and (max-width: 1224px) {
+
+  .mainPage {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 100vw;
+  }
+  .mainPage--description {
+    display: none;
+  }
+
+  .mainPage__img {
+    flex: 1;
+    transition: .5s ease-in-out;
+    max-width: 100%;
+  }
+  .mainPage__img:hover {
+    filter: grayscale(0);
+  }
+
+
+  .mainPage__img2 {
+    display: none;
+  }
+  .mainPage__img3 {
+    display: none;
+  }
+
+  .mainPage__img1 {
+    flex: 1;
+    background-image: url('../../assets/mini/img3mini.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+  }
+}

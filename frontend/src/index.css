@@ -1,0 +1,76 @@
+:root {
+  --background-color: #282c34;
+  --primary-color: #016e89;
+  --secondary-color: #409ca4;
+  --font-editable-color: #409ca4;
+  --title-light-color: #f2eadf;
+
+  --paper-effect: {
+    clip-path: polygon(
+            0% 0%,
+            0% 93%,
+            5% 98%,
+            6% 99%,
+            8% 95%,
+            12% 94%,
+            15% 97%,
+            17% 93%,
+            20% 98%,
+            22% 97%,
+            25% 99%,
+            31% 94%,
+            35% 93%,
+            39% 96%,
+            43% 93%,
+            45% 94%,
+            47% 95%,
+            50% 92%,
+            52% 96%,
+            54% 93%,
+            58% 92%,
+            60% 95%,
+            62% 93%,
+            65% 96%,
+            69% 93%,
+            72% 93%,
+            75% 94%,
+            79% 97%,
+            81% 94%,
+            85% 93%,
+            88% 92%,
+            90% 95%,
+            93% 93%,
+            95% 92%,
+            97% 95%,
+            100% 97%,
+            100% 0%
+    );
+  }
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  overflow-x: hidden;
+  transition: all .2s ease-in-out;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--secondary-color);
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+  scrollbar-width: 7px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 3px;
+}
+
+#root {
+  overflow: hidden;
+}

@@ -1,0 +1,68 @@
+.main__edit {
+    height: 20vh;
+    margin: 50px auto;
+    position: relative;
+    top: 10px;
+    background-size: 1000px;
+    background: url("https://i.imgur.com/0kjMcUe.png") center right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 30px 80px 50px 80px;
+    filter: brightness(0.95) sepia(30%) saturate(80%);
+    border-radius: 30px;
+    clip-path: polygon(
+            0% 0%,
+            0% 93%,
+            5% 98%,
+            6% 99%,
+            8% 95%,
+            12% 94%,
+            15% 97%,
+            17% 93%,
+            20% 98%,
+            22% 97%,
+            25% 99%,
+            31% 94%,
+            35% 93%,
+            39% 96%,
+            43% 93%,
+            45% 94%,
+            47% 95%,
+            50% 92%,
+            52% 96%,
+            54% 93%,
+            58% 92%,
+            60% 95%,
+            62% 93%,
+            65% 96%,
+            69% 93%,
+            72% 93%,
+            75% 94%,
+            79% 97%,
+            81% 94%,
+            85% 93%,
+            88% 92%,
+            90% 95%,
+            93% 93%,
+            95% 92%,
+            97% 95%,
+            100% 97%,
+            100% 0%
+    );
+    overflow: auto;
+    font-size: 16pt;
+    font-weight: 400;
+    line-height: 28pt;
+    color: #565046;
+    letter-spacing: 0.5px;
+    word-spacing: 3px;
+    text-shadow: 0.2px 0.2px 1.3px Sienna;
+    word-break: break-all;
+}
+
+.main__edit:focus {
+    outline: 1px dotted var(--primary-color);
+}

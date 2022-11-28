@@ -1,0 +1,44 @@
+.appbar__sandwich {
+  width: 65px;
+  height: 65px;
+  margin-top: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+
+.sandwich__item {
+  position: relative;
+  width: 45px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  transition: .3s ease-in-out;
+}
+
+.sandwich__item0 {
+  top: 15px;
+}
+.sandwich__item1 {
+  top: 25px;
+}
+.sandwich__item2 {
+  top: 35px;
+}
+
+.appbar__sandwich--extended > .sandwich__item0 {
+  transform: rotate(120deg);
+  opacity: 0;
+}
+
+.appbar__sandwich--extended > .sandwich__item1 {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.appbar__sandwich--extended > .sandwich__item2 {
+  transform: rotate(45deg);
+  opacity: 0;
+}
+

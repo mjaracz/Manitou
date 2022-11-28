@@ -1,0 +1,46 @@
+.header__appbar {
+  position: fixed;
+  width: 100vw;
+  height: 80px;
+  background: var(--background-color);
+  border-bottom: solid #111111;
+  overflow: hidden;
+  z-index: 120;
+  top: 0;
+  left: 0;
+  opacity: .8;
+}
+
+
+.header__appbar > li {
+  float: left;
+  list-style: none;
+  color: var(--title-light-color);
+}
+
+.header__appbar li:first-child {
+  margin-left: 20px;
+}
+
+.header__appbar > li:last-child {
+  float: right;
+  margin-right: 20px;
+}
+
+.header__appbar > li:last-child::after {
+  clear: both;
+}
+
+.appbar__item {
+  display: block;
+  padding: 25px;
+  text-decoration: none;
+  color: var(--title-light-color);
+  font-size: 18px;
+  transition: .3s ease-in-out;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.appbar__item:hover {
+  color: #f1f1f1;
+}

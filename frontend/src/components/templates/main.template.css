@@ -1,0 +1,16 @@
+.stories__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.stories__title {
+    color: var(--title-light-color);
+    font-family: "Yellowtail", cursive;
+    font-size: 80pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

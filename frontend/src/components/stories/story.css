@@ -1,0 +1,30 @@
+.item__title {
+    font-family: "Yellowtail", cursive;
+    font-size: 36pt;
+    margin: 0;
+    font-weight: 1;
+    color: #26231e;
+    mix-blend-mode: color-burn;
+}
+
+.item__body {
+    font-size: 16pt;
+    font-weight: 400;
+    line-height: 28pt;
+    color: #565046;
+    letter-spacing: 0.5px;
+    word-spacing: 3px;
+    text-shadow: 0.2px 0.2px 1.3px Sienna;
+}
+
+.item__author {
+    font-size: 16pt;
+    font-weight: 400;
+    line-height: 28pt;
+    color: #565046;
+    letter-spacing: 0.5px;
+    word-spacing: 3px;
+    text-shadow: 0.2px 0.2px 1.3px Sienna;
+
+    font-family: "Yellowtail", cursive;
+}

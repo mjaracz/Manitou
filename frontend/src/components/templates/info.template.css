@@ -1,0 +1,69 @@
+.main {
+    width: 80vw;
+    background-color: var(--primary-color);
+    color:  var(--background-color);
+    margin: 100px auto;
+    padding: 40px;
+    border-radius: 30px;
+    clip-path: polygon(
+            0% 0%,
+            0% 93%,
+            5% 98%,
+            6% 99%,
+            8% 95%,
+            12% 94%,
+            15% 97%,
+            17% 93%,
+            20% 98%,
+            22% 97%,
+            25% 99%,
+            31% 94%,
+            35% 93%,
+            39% 96%,
+            43% 93%,
+            45% 94%,
+            47% 95%,
+            50% 92%,
+            52% 96%,
+            54% 93%,
+            58% 92%,
+            60% 95%,
+            62% 93%,
+            65% 96%,
+            69% 93%,
+            72% 93%,
+            75% 94%,
+            79% 97%,
+            81% 94%,
+            85% 93%,
+            88% 92%,
+            90% 95%,
+            93% 93%,
+            95% 92%,
+            97% 95%,
+            100% 97%,
+            100% 0%
+    );
+}
+
+.main > .main__title {
+    font-size: 38px;
+    letter-spacing: 2px;
+    margin: 40px;
+    text-align: left;
+    font-family: 'Ubuntu', sans-serif;
+    color:  var(--background-color);
+}
+
+.main__text {
+    text-align: justify;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    color:  var(--background-color);
+
+}
+.main__text > p {
+    margin: 25px;
+    font-family: 'Ubuntu', sans-serif;
+    color:  var(--background-color);
+}
